@@ -1,7 +1,7 @@
 # Janus
 # Jared Raby 09/2016
 #
-# fileConvert.py
+# dirPrep.py
 # Description:
 # Top level node that starts handling the directory identification and prep for the incoming file. # Generates a stack to keep track of pending file conversions, generates identifiers, and serves as
 # the information prep area before the system calls the conversion tools.
@@ -14,7 +14,7 @@ import shutil
 import errno
 
 # Take a HTTP request and generate a unique file directory for the input and output files of a particular request.
-def directoryPrep():
+def dirPrep():
     baseDir = "/tmp/janus-"
     fileId = idGen()
     locDir = baseDir + fileId
@@ -28,7 +28,7 @@ def directoryPrep():
     return locDir
 
 # Delete the directory passed in. Used to clean up the /tmp directory once the conversion has been completed
-def directoryDelete( dir ):
+def dirDelete( dir ):
 
     try:
         shutil.rmtree(dir)
