@@ -3,7 +3,8 @@
 #
 # dirPrep.py
 # Description:
-# Top level node that starts handling the directory identification and prep for the incoming file. # Generates a stack to keep track of pending file conversions, generates identifiers, and serves as
+# Top level node that starts handling the directory identification and prep for the incoming file. 
+# Generates a stack to keep track of pending file conversions, generates identifiers, and serves as
 # the information prep area before the system calls the conversion tools.
 
 
